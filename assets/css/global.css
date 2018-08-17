@@ -2105,3 +2105,19 @@ input[type="email"].circle--input--h6, input[type="number"].circle--input--h6, i
 .logo:hover {
   box-shadow: 0 0 0 15px #fff inset;
 }
+
+.profile-image {
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 50%;
+  margin-bottom: 24px;
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+

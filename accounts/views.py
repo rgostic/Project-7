@@ -76,10 +76,11 @@ def edit_profile(request):
         userprofile.save()
 
     if request.method == "POST":
-        form = forms.UserProfileForm(request.POST)
-        form.user = request.user
-        form.save()
-        return render(request, 'accounts/edit_profile.html', {"userprofileform": form})
+        form = forms.UserProfileForm(request.POST, request.FILES, instance=userprofile)        
+        if form.is_valid():
+                     
+            form.save()
+            return HttpResponseRedirect(reverse('accounts:view_profile'))
     else:
         form = forms.UserProfileForm(instance=userprofile)
 

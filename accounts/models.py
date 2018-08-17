@@ -9,6 +9,6 @@ class UserProfile(models.Model):
 	email = models.EmailField(default="")
 	birthday = models.DateField(null=True, blank=True)
 	bio = models.TextField(default="")
-	avatar = models.ImageField(null=True, blank=True)
+	avatar = models.ImageField(null=True, blank=True,upload_to='./user_profile_avatar')
 
 	

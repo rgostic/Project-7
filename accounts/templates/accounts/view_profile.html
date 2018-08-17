@@ -3,5 +3,25 @@
 {% block title %}View Profile | {{ super }}{% endblock %}
 
 {% block body %}
-	First Name: {{user.userprofile.first_name}}
+<div class="profile-container">
+	<p>
+	 {{userprofile.first_name}} {{userprofile.last_name}}</p>
+	
+	
+		
+
+		{% if userprofile.avatar %}
+			<img class="profile-image" src="{{userprofile.avatar.url}}" alt="Profile Avatar">
+		{% endif %}
+	
+
+	
+	
+	
+		<p>Email: {{userprofile.email}}</p>
+		
+		<p>Birthday: {{userprofile.birthday}}</p>
+		<p>Bio: {{userprofile.bio}}</p>
+	
+</div>	
 {% endblock %}
